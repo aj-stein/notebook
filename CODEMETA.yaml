@@ -34,14 +34,14 @@ themes:
   # - Bioscience
   # - Buildings & Construction
   # - Chemistry
-  # - Cybersecurity
+  - Cybersecurity
   # - Electronics
   # - Energy
   # - Environment
   # - Fire
   # - Forensic Science
   # - Health
-  # - Information Technology
+  - Information Technology
   # - Infrastructure
   # - Manufacturing
   # - Materials
@@ -53,5 +53,5 @@ themes:
   # - Physics
   # - Public safety
   # - Resilience
-  # - Standards
+  - Standards
   # - Transportation
