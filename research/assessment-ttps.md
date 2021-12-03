@@ -1,18 +1,12 @@
 # Techniques, Tactics, and Procedures for Assessment
 
-## What procedures do we have for assessment?
+## What tactics do we have for assessment?
 
 ### NIST Standards
 
-- NIST SCAP Program
-    - CCE
-    - CPE
-    - CVE
-    - CVSS
-    - OCIL (draft, never really made it)
-    - OVAL (automated assessment, interesting to OSCAL community)
-    - XCCDF    
+- Risk Management Framework 800-53A
 
+## What techniques and procedures do we use? Do 
 ## What tools do we use for assessment?
 
 ### Manual
@@ -20,6 +14,11 @@
 ### Automated
 
 - SCAP tools (under general standards 1.2 and 1.3) [validated under NIST SVP](https://csrc.nist.gov/projects/scap-validation-program/validated-products-and-modules)
+- Community and industry tools for security testing:
+    - Ansible
+    - Chef
+    - InSpec
+    - Puppet
 
 ## How do we communicate assessment intent and results?
 ## Open Questions
