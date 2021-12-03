@@ -39,6 +39,8 @@ applicable.
 
 ### Manual
 
+### Semi-Automated (Computer-Assisted)
+
 ### Automated
 
 - SCAP tools (under general standards 1.2 and 1.3) [validated under NIST SVP](https://csrc.nist.gov/projects/scap-validation-program/validated-products-and-modules)
