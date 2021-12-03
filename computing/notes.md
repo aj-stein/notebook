@@ -35,3 +35,17 @@ powershell.exe -command "Get-Clipboard"
 ```
 
 Source: [StackOverflow](https://stackoverflow.com/a/43408226)
+
+#### Mapping Caps Lock key to Ctrl
+
+How often am I going to need all caps anyway?
+
+```sh
+$hexified = "00,00,00,00,00,00,00,00,02,00,00,00,1d,00,3a,00,00,00,00,00".Split(',') | % { "0x$_"};
+
+$kbLayout = 'HKLM:\System\CurrentControlSet\Control\Keyboard Layout';
+
+New-ItemProperty -Path $kbLayout -Name "Scancode Map" -PropertyType Binary -Value ([byte[]]$hexified);
+```
+
+Source: [StackOverflow](https://superuser.com/a/997448)
