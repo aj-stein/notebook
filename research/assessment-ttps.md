@@ -34,6 +34,32 @@ applicable.
 
 </details>
 
+
+#### NISTIR 8011-1
+
+<details>
+<summary>References from 8011-1 re the what and how of assessment</summary>
+
+> While the defect check assesses the individual controls or control items that work together to achieve a purpose, at the same time the defect check also tests the overall effectiveness of the controls working together as a sub-capability. In NISTIR 8011, defect checks are designed so that there is one defect check for each defined sub-capability.
+
+> The difference in the level of focus—between defect checks and determination statements—has a significant impact on how a defect, once discovered, is interpreted. The difference relates to the sensitivity and specificity of the result.
+
+> A sensitive test is one which finds all of the cases where a defect occurs; that is, it has a low false negative rate.
+
+> A specific test is one which does not report a defect when one is not present; that is, it has a low false positive rate.
+
+> Because defect checks measure the result to be achieved by a set of controls, defect checks can be very specific, at the purpose level of abstraction, about whether that result was achieved. However, failure to achieve the result does not imply that ALL the controls or control items 
+supporting that capability or sub-capability failed. Thus, while the defect check is specific at the purpose or sub-purpose level of abstraction, it is not specific at the control or control item level 
+of abstraction. 
+
+> Completeness means the extent to which the security-related information includes assessment of all relevant defects on all assessment objects (within a defined scope such as a capability). Relevant defects are defects that produce significant risk, e.g., the top two orders of magnitude. Incomplete metrics tend to bias the results by underestimating total risk.
+
+> Timeliness means the extent to which the security-related information has been refreshed within the last X hours or days (as determined/required by the organization. Data must be collected (and defects mitigated) faster than the attacker(s) can act, in order to be able to stay ahead of their ability to compromise a system.
+
+> For the agency dashboard to generate effective to-do lists for responding to defects, the dashboard requires the functionality to identify the specific operational role (person or group) responsible for responding to each defect (maintained as part of the desired state specification).
+
+</details>
+
 ## What techniques and procedures do we use? Do 
 ## What tools do we use for assessment?
 
