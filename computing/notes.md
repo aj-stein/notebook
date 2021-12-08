@@ -49,3 +49,17 @@ New-ItemProperty -Path $kbLayout -Name "Scancode Map" -PropertyType Binary -Valu
 ```
 
 Source: [StackOverflow](https://superuser.com/a/997448)
+
+## Linux/Unix
+
+### Debian/Ubuntu
+
+#### Listing Files in .deb packages
+
+```
+dpkg --contents /var/cache/apt/archives/package_name1.2.3-maintainer_sysarch.deb
+```
+
+#### Useful PPA Repositories
+
+- [Longsleep PPA Golang Backports](https://launchpad.net/~longsleep/+archive/ubuntu/golang-backports)
