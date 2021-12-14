@@ -50,6 +50,12 @@ New-ItemProperty -Path $kbLayout -Name "Scancode Map" -PropertyType Binary -Valu
 
 Source: [StackOverflow](https://superuser.com/a/997448)
 
+#### SSH Agent Socket Forwarding from WSL to Windows with Keeagent
+
+Install `npiperelay.exe` and `wsl-ssh-agent-gui.exe` per [this forked guide](https://gist.github.com/aj-stein-nist/9218062c0a1a2b717a8800f92a8de245).
+
+Source: [Original guide from strasis](https://gist.github.com/strarsis/e533f4bca5ae158481bbe53185848d49#file-howto-md)
+
 ## Linux/Unix
 
 ### Debian/Ubuntu
