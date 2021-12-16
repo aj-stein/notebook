@@ -66,6 +66,18 @@ Source: [Original guide from strasis](https://gist.github.com/strarsis/e533f4bca
 dpkg --contents /var/cache/apt/archives/package_name1.2.3-maintainer_sysarch.deb
 ```
 
-#### Useful PPA Repositories
+#### Language Runtime and Package Management
 
-- [Longsleep PPA Golang Backports](https://launchpad.net/~longsleep/+archive/ubuntu/golang-backports)
+I recommend using [`asdf`](https://asdf-vm.com/guide/getting-started.html#_3-install-asdf) and the following plugins for language runtime management. I do this instead of installing one unique tool per runtime (`nvm` for `node`, `rvm` for `ruby`, et cetera).
+
+- [asdf-golang](https://github.com/kennyp/asdf-golang)
+- [asdf-nodejs](https://github.com/asdf-vm/asdf-nodejs)
+
+You can vet and install the right plugin, but then follow the same workflow across tools.
+
+```sh
+source $HOME/.asdf/asdf.sh
+asdf plugin-add langname https://github.com/org/asdf-langname.git
+asdf install langname latest
+asdf global langname latest
+```
