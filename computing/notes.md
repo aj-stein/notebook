@@ -58,13 +58,7 @@ Source: [Original guide from strasis](https://gist.github.com/strarsis/e533f4bca
 
 ## Linux/Unix
 
-### Debian/Ubuntu
-
-#### Listing Files in .deb packages
-
-```
-dpkg --contents /var/cache/apt/archives/package_name1.2.3-maintainer_sysarch.deb
-```
+### Miscellania for All Distros
 
 #### Language Runtime and Package Management
 
@@ -80,4 +74,24 @@ source $HOME/.asdf/asdf.sh
 asdf plugin-add langname https://github.com/org/asdf-langname.git
 asdf install langname latest
 asdf global langname latest
+```
+
+#### OpenSSL Decode Certificate
+
+```
+openssl x509 -noout -text -in /home/ec2-user/cert.pem
+```
+
+#### OpenSSL Decode Certificate Signing Request (CSR)
+
+```
+openssl req -noout -text -in /tmp/test.csr
+```
+
+### Debian/Ubuntu
+
+#### Listing Files in .deb packages
+
+```
+dpkg --contents /var/cache/apt/archives/package_name1.2.3-maintainer_sysarch.deb
 ```
