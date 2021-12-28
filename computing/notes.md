@@ -56,6 +56,12 @@ Install `npiperelay.exe` and `wsl-ssh-agent-gui.exe` per [this forked guide](htt
 
 Source: [Original guide from strasis](https://gist.github.com/strarsis/e533f4bca5ae158481bbe53185848d49#file-howto-md)
 
+#### WSL Ubuntu Defaults for `git` and `core.fileMode`
+
+It seems using the Ubuntu 20.04 distro via WSL and with git installed via (`sudo apt install git`) leads to a default configuration with core.fileMode set to `false`. When developing shell scripts where the executable bit needs to be sit, `git status`, `git diff`, and other important commands will ignore file mode changes and make it difficult to detect any change (or lack thereof).
+
+Source: [StackOverflow](https://stackoverflow.com/a/1580644).
+
 ## Linux/Unix
 
 ### Miscellania for All Distros
