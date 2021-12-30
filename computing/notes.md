@@ -62,6 +62,19 @@ It seems using the Ubuntu 20.04 distro via WSL and with git installed via (`sudo
 
 Source: [StackOverflow](https://stackoverflow.com/a/1580644).
 
+#### Firefox and NTLM Passthrough Authentication on Windows
+
+By default, Firefox (as tested on Windows 10) does not allow automatic single sign-on with NTLM and/or Kerberos environments, either via local Active Directory or Azure's ADFS.
+
+To use Single Sign-on with Firefox, you must enable the Windows Sign-on Settings and enable the relevant trusted authentication URIs. You can go to the `about:config` menu to set these manually _or_ you can update the following settings in your Firefox profile `prefs.js` configuration file.
+
+```js
+// If this file was empty before you made these modifications, it must start with a comment.
+user_pref("network.http.windows-sso.enabled", true);
+user_pref("network.automatic-ntlm-auth.trusted-uris", "auth.nist.gov,sts.nist.gov,sts2.nist.gov");
+user_pref("network.negotiate-auth.trusted-uris", "auth.nist.gov,sts.nist.gov,sts2.nist.gov");
+```
+
 ## Linux/Unix
 
 ### Miscellania for All Distros
