@@ -57,6 +57,12 @@ used?
 Yes, the results of security and privacy control assessments conducted during the system development life cycle (SDLC) can be used for the authorization package. If assessments conducted during the SDLC identify any deficiencies, these can be captured in the security and privacy plans or be mitigated prior to the assessment. If there are no identified deficiencies from assessments conducted during the SDLC, then these security and privacy controls may not need to be re-assessed. 
 <details>
 
+<details>
+<summary>Organizations support system control assessments through scaling enterprise-wide solutions and/or automation (800-37 Assessment Step FAQ)</summary>
+ How can organizations support system control assessments?
+Organizations can support system control assessments through the provision of enterprise solutions that can automate some of the tasks associated with not only security and privacy control assessments but with risk assessment (e.g., vulnerability assessments). Organization-wide security and privacy solutions may also include governance, risk management, and compliance applications that support assessment and authorization activities (e.g., plan of action and milestone tracking, configuration management tools). In addition to enterprise solutions and enterprise security services, organizations may provide the workforce for supporting control assessments, including independent control assessment teams.
+</details>
+
 ##### 800-53A
 
 Does 800-53A mean the same thing when we say assessment framework?
