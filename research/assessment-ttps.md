@@ -31,6 +31,8 @@ this publication.
 > Establishing an appropriate set of expectations before, during, and after an assessment is paramount to achieving an acceptable
 outcome
 
+> Organizations consider both the technical expertise and level of independence required in selecting security and privacy control assessors.28 Organizations ensure that assessors possess the required skills and technical expertise to successfully carry out assessments of system specific, hybrid, and common controls.
+
 </details>
 
 
@@ -57,6 +59,13 @@ of abstraction.
 
 > For the agency dashboard to generate effective to-do lists for responding to defects, the dashboard requires the functionality to identify the specific operational role (person or group) responsible for responding to each defect (maintained as part of the desired state specification).
 
+</details>
+
+#### 800-115 Technical Guide to Information Security Testing and Assessment
+
+<details>
+<summary>800-115 views on different kinds of assessment</summary>
+An information security assessment is the process of determining how effectively an entity being assessed (e.g., host, system, network, procedure, person—known as the assessment object) meets specific security objectives. Three types of assessment methods can be used to accomplish this—testing, examination, and interviewing. Testing is the process of exercising one or more assessment objects under specified conditions to compare actual and expected behaviors. Examination is the process of checking, inspecting, reviewing, observing, studying, or analyzing one or more assessment objects to facilitate understanding, achieve clarification, or obtain evidence. Interviewing is the process of conducting discussions with individuals or groups within an organization to facilitate understanding, achieve clarification, or identify the location of evidence. Assessment results are used to support the determination of security control effectiveness over time.
 </details>
 
 ## What techniques and procedures do we use? Do 
