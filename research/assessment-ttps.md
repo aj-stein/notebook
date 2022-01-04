@@ -23,6 +23,12 @@ What is the outcome of a security and privacy control assessment?
 Security and privacy control assessments verify that selected controls are implemented correctly, operating as expected, and recorded appropriately (e.g., in security and privacy plans). The deficiencies in the implementation of security and privacy controls should be prioritized by the potential risks they convey to the system, components, and organization.
 </details>
 
+<details>
+<summary>What is control assessment? (800-37 Assessment Step FAQ)</summary>
+Why assess controls?
+There are two primary motivations for assessing security and privacy controls: 1) to ensure that the security and privacy controls for managing risk are in place and producing the desired outcomes and 2) to provide the authorizing official with the information needed to make an authorization decision. Control assessment verifies that the safeguards are in place and working as planned, providing system management and Authorizing Officials with an overall security and privacy posture of the system. Control assessments may be conducted as controls are implemented in early stages of the system development in order to identify issues with controls early in the development process.
+</details>
+
 ##### 800-53A
 
 Does 800-53A mean the same thing when we say assessment framework?
