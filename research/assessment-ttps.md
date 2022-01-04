@@ -2,6 +2,16 @@
 
 ## What do we mean by assessment?
 
+When people discuss the notional kinds of assessment, they overload the word. Within NIST, and more specifically how the Risk Management Framework series frames these concepts, there are two loosely categorized types of this activity.
+
+1. Control Assessment (the RMF Assess Step activity): the macro-level process of reviewing top-down how a system is designed and implemented to meet control objectives through capabilities. This activity is high-level, where abstracted requirements (having policies, procedures, standards, and baselines for use of validated cryptography in system design and implentation) define objectives that can be applied to a variety of heterogenous designs and implemented systems (a 25 year batch application on a mainframe using FIPS-140-2 at the operating system and middleware level and the batch application leverages that; a Function-as-a-Service application with managed infrastructure in a modern IaaS/PaaS solution in a public cloud environment with the provider's hardware, operating system, virtualization platform, virtualized OS, and HTTPS API endpoints using FIPS-140-2 validated solutions)
+
+1. Security testing and examination (many colloquially call this assessment and self-assesment, depending on who performs it): this is a more generalized view of a collection of tactical and operational acts focused on a system or its sub-systems. These are tangible checks for the state and state changes of micro-level properties of a system. The self-assessment and assessment acts support Control Assessments and the RMF Assess Step activity.
+
+Discussion of assessment is complicated because, in the security industry primarily in the US public sector, both are described interchangeably and NIST RMF practicioners see the two on a continuum, but are distinctly different. They should be discussed separately.
+
+### Assessment and Control Assessment (NIST RMF)
+
 ## What tactics do we have for assessment?
 
 ### NIST Standards
