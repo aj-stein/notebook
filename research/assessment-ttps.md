@@ -8,6 +8,23 @@
 
 #### Risk Management Framework and SP 800-53A
 
+##### 800-37r2
+
+<details>
+<summary>Is a RMF Assessment temporal or can it be reused? (RMF 800-37 Assessment Step FAQ)</summary>
+Can results from a previous control assessment be leveraged for (re-)authorization purposes? It may be possible to leverage recent control assessment results provided that the assessment was conducted according to
+organizationally accepted assessment methodologies and depending on what was assessed and how much time elapsed since the
+previous assessment. The security and privacy assessment plans play an important role in validating the recent assessment results. Note, however, that a control assessment is a snapshot in time, meaning that the security and privacy posture captured by the assessment reflects the posture at the time the assessment was performed. For additional guidance on the re-use of assessment results, see NIST SP 800-53A, Revision 4, Assessing Security and Privacy Controls in Federal Information Systems and Organization.
+</details>
+
+<details>
+<summary>What is the outcome of a security and privacy control assessment?<summary>Is a RMF Assessment temporal or can it be reused? (RMF 800-37 Assessment Step FAQ)</summary>
+What is the outcome of a security and privacy control assessment?
+Security and privacy control assessments verify that selected controls are implemented correctly, operating as expected, and recorded appropriately (e.g., in security and privacy plans). The deficiencies in the implementation of security and privacy controls should be prioritized by the potential risks they convey to the system, components, and organization.
+</details>
+
+##### 800-53A
+
 Does 800-53A mean the same thing when we say assessment framework?
 
 <details>
@@ -80,6 +97,10 @@ To accomplish technical security assessments and ensure that technical security 
 <details>
 <summary>Different assessment technqiues and relationship to NIST 800-53, OSTMM, other methodologies</summary>
 Several accepted methodologies exist for conducting different types of information security assessments. References to several of these methodologies are found in Appendix E.2 For example, NIST has created a methodology—documented in Special Publication (SP) 800-53A, Guide for Assessing the Security Controls in Federal Information Systems—which offers suggestions for assessing the effectiveness of the security controls outlined in NIST SP 800-53.3 Another widely used assessment methodology is the Open Source Security Testing Methodology Manual (OSSTMM).4 Because there are numerous reasons to conduct assessments, an organization may want to use multiple methodologies. This publication offers recommendations for technical testing and examination techniques that can be used for many assessment methodologies and leveraged for many assessment purposes.
+</details>
+
+<details>
+<summary></summary>
 </details>
 
 ## What techniques and procedures do we use? Do 
