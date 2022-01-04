@@ -192,6 +192,24 @@ ANSIBLE_ENABLE_TASK_DEBUGGER=True ansible-playbook \
     -i inventory playbook.yml
 ```
 
+#### Cloudwatch Log Analysis with `cw`
+
+The `cw` tool is wonderful for quickly analyzing AWS CloudWatch logs in the console.
+
+```sh
+$ export CW_VERSION=v.4.1.1
+$ export CW_DL_DIR=/tmp
+$ pushd "${CW_DL_DIR}"
+$ curl -L -O https://github.com/lucagrulla/cw/releases/download/${CW_VERSION}/cw_amd64.deb
+$ apt-cache show "${CW_DL_DIR}/cw_amd64.deb" # Manually review metadata before installation
+$ apt install "${CW_DL_DIR}/cw_amd64.deb"
+$ $(which cw) --version
+4.1.1
+$ export AWS_PROFILE=profilename
+$ export AWS_DEFAULT_REGION=us-east-1
+$ cw tail --follow /aws/path/to/group/stream-name
+```
+
 #### Conditional Assignment of Task Attributes with `omit` Doesn't Work
 
 And that's by design, folks! Well, at least it as of `ansible [core 2.12.1]`. There is [an issue that covers this](https://github.com/ansible/ansible/issues/14130), and `ansible` devs make it clear, to paraphrase "the tool works just the way it is intended not how reporters expect." I wasted a day on this, so here you go!
