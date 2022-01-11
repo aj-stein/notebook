@@ -122,6 +122,18 @@ asdf install langname latest
 asdf global langname latest
 ```
 
+#### Wildcard Patterns for SSH `StrictHostKeyChecking` and Ephemeral Servers
+
+Using a lot of ephemeral cloud servers accessible from an AWS ELB or something similar? I do. I got tired of fixing up my `~/.ssh/known_hosts` file and adding `-o StrictHostKeyChecking=no` every time I ran a command, so I checked and ~/ss
+
+```sh
+cat << EOF >> ~/.ssh/config # double carrots to not clobber existing stuffs
+Host project-name*.elb.*.amazonaws.com
+   StrictHostKeyChecking no
+   UserKnownHostsFile=/dev/null
+EOF
+```
+
 #### Enforce Connection Timeouts with SSH Clients
 
 If you need to test timeouts, the OpenSSH `ssh` client takes a long time. You can enforce shorter timeouts for testing.
