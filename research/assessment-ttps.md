@@ -107,6 +107,12 @@ outcome
 
 </details>
 
+#### 800-115 Technical Guide to Information Security Testing and Assessment
+
+<details>
+<summary>800-115 views on different kinds of assessment</summary>
+An information security assessment is the process of determining how effectively an entity being assessed (e.g., host, system, network, procedure, person—known as the assessment object) meets specific security objectives. Three types of assessment methods can be used to accomplish this—testing, examination, and interviewing. Testing is the process of exercising one or more assessment objects under specified conditions to compare actual and expected behaviors. Examination is the process of checking, inspecting, reviewing, observing, studying, or analyzing one or more assessment objects to facilitate understanding, achieve clarification, or obtain evidence. Interviewing is the process of conducting discussions with individuals or groups within an organization to facilitate understanding, achieve clarification, or identify the location of evidence. Assessment results are used to support the determination of security control effectiveness over time.
+</details>
 
 #### NISTIR 8011-1
 
@@ -133,12 +139,6 @@ of abstraction.
 
 </details>
 
-#### 800-115 Technical Guide to Information Security Testing and Assessment
-
-<details>
-<summary>800-115 views on different kinds of assessment</summary>
-An information security assessment is the process of determining how effectively an entity being assessed (e.g., host, system, network, procedure, person—known as the assessment object) meets specific security objectives. Three types of assessment methods can be used to accomplish this—testing, examination, and interviewing. Testing is the process of exercising one or more assessment objects under specified conditions to compare actual and expected behaviors. Examination is the process of checking, inspecting, reviewing, observing, studying, or analyzing one or more assessment objects to facilitate understanding, achieve clarification, or obtain evidence. Interviewing is the process of conducting discussions with individuals or groups within an organization to facilitate understanding, achieve clarification, or identify the location of evidence. Assessment results are used to support the determination of security control effectiveness over time.
-</details>
 
 <details>
 <summary>Goals of technical security assessment and examination</summary>
@@ -156,6 +156,14 @@ Several accepted methodologies exist for conducting different types of informati
 
 <details>
 <summary></summary>
+</details>
+
+
+#### NISTIR 8062
+
+<details>
+<summary>Gaps Between Privacy Policy (Controls) and Engineering</summary>
+April 2014, NIST first focused its efforts on the communication gap between policy and legal teams and the engineering and information technology (IT) teams cited by multiple attendees as being at the core of many of their organizations’ privacy challenges.
 </details>
 
 ## What techniques and procedures do we use? Do 
