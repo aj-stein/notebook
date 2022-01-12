@@ -25,6 +25,35 @@ git config --global --add url."git@github.com:".insteadOf "https://github.com/"
 
 Source: [StackOverflow](https://stackoverflow.com/a/44247040)
 
+### XML
+
+#### XPath 1.0
+
+#### XPath 2.0
+
+##### Query Node for Attribute, Its Text, and a Parent Attribute
+
+Here is an example of a short and sweet query.
+
+```xml
+<Benchmark>
+  <Group>
+    <Rule id="SV-567898767890987_rule" weight="10.0" severity="medium">
+      <version>RULE-012345</version>
+      <title>Rules rules rules!</title>
+      <description>Meh</description>
+      <ident system="http://cyber.mil/cci">CCI-12345678</ident>
+    </Rule>
+  </Group>
+</Benchmark>
+```
+
+```xpath
+/Benchmark/Group/Rule/ident/("Rule: " || ../@id || " System: " || @system || " ID: " || string(.))
+```
+
+Source: [Wendell Piez in Gitter](https://gitter.im/usnistgov-OSCAL/xslt-etc?at=61df3c0e46529077f580318a)
+
 ## Windows
 
 ### Windows Subsystem for Linux
