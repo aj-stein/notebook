@@ -139,7 +139,7 @@ I recommend using [`asdf`](https://asdf-vm.com/guide/getting-started.html#_3-ins
 
 - [asdf-cf](https://github.com/mattysweeps/asdf-cf)
 - [asdf-golang](https://github.com/kennyp/asdf-golang)
-- [asdf-hugo](https://github.com/beardix/asdf-hugo.git)
+- [asdf-hugo](shttps://github.com/beardix/asdf-hugo.git)
 - [asdf-nodejs](https://github.com/asdf-vm/asdf-nodejs)
 - [asdf-hashicorp](https://github.com/Banno/asdf-hashicorp.git) for `terraform`
 
