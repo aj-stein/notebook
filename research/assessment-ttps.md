@@ -107,6 +107,11 @@ outcome
 
 </details>
 
+<details>
+<summary>What is an assurance case?</summary>
+Building an effective assurance case for security and privacy control effectiveness is a process that involves compiling evidence from a variety of activities conducted during the system development life cycle that the controls employed in the system are implemented correctly, operating as intended, and producing the desired outcome with respect to meeting the security and privacy requirements of the system and the organization and presenting the evidence in a manner that decision makers are able to use effectively in making risk-based decisions about the operation or use of the system.
+</details>
+
 #### 800-115 Technical Guide to Information Security Testing and Assessment
 
 <details>
