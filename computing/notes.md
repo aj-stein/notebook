@@ -42,6 +42,19 @@ git config --global --add url."git@github.com:".insteadOf "https://github.com/"
 
 Source: [StackOverflow](https://stackoverflow.com/a/44247040)
 
+### Visual Studio 2022
+
+#### Nuget Package Manager Stuck in Offline Mode
+
+When you install Visual Studio 2022 (this was with community edition, but I presume it is similar throughout), you need to make sure when projects fail to properly build after a fresh install that the NuGet Package Manager is not in offline mode. You need to configure Nuget official package repository.
+
+1. Open Visual Studio 2022.
+1. Select Tools > NuGet Package Manager > Package Manager Settings.
+1. Under NuGet Package Manager, select the Package Sources sub-menu.
+1. If not added, add a new entry with the `+`, enter the name `NuGet` and the source of `https://api.nuget.org/v3/index.json`.
+1. Ensure there is a checkmark next to the new entry.
+1. Click OK and attempt to download packages for the project's solutions.
+
 ### XML
 
 #### XPath 1.0
