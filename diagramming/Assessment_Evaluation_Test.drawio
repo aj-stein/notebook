@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-03-03T19:24:48.381Z" agent="5.0 (Windows)" etag="Daxl2kYsWN-L8JkmWCz2" version="16.6.5" type="github">
+<mxfile host="app.diagrams.net" modified="2022-03-03T22:14:05.330Z" agent="5.0 (Windows)" etag="81NdohXrYpRdRgqnU2Po" version="16.6.5" type="github">
   <diagram id="6a731a19-8d31-9384-78a2-239565b7b9f0" name="Page-1">
     <mxGraphModel dx="1384" dy="752" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" background="none" math="0" shadow="0">
       <root>
@@ -447,6 +447,37 @@
         </mxCell>
         <mxCell id="1542" style="edgeStyle=none;rounded=0;html=1;exitX=0.5;exitY=1;endArrow=none;endFill=0;jettySize=auto;orthogonalLoop=1;strokeColor=#736CA8;strokeWidth=2;fillColor=#64bbe2;fontSize=20;fontColor=#23445D;" parent="1" source="1529" target="1529" edge="1">
           <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="PBcIXkFHgragpKWVIyf9-1554" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;dashPattern=1 1;startArrow=classic;startFill=1;endArrow=none;endFill=0;strokeColor=#2F5B7C;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="PBcIXkFHgragpKWVIyf9-1546">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="489" y="960" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PBcIXkFHgragpKWVIyf9-1546" value="Rule 1 in OSCAL component definition" style="shape=document;whiteSpace=wrap;html=1;boundedLbl=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="429.5" y="1030" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="PBcIXkFHgragpKWVIyf9-1556" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;dashed=1;dashPattern=1 1;startArrow=classic;startFill=1;endArrow=none;endFill=0;strokeColor=#2F5B7C;" edge="1" parent="1" source="PBcIXkFHgragpKWVIyf9-1547">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="490" y="960" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PBcIXkFHgragpKWVIyf9-1547" value="Rule 1 in OSCAL component definition" style="shape=document;whiteSpace=wrap;html=1;boundedLbl=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="570" y="1030" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="PBcIXkFHgragpKWVIyf9-1551" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;strokeColor=#2F5B7C;dashed=1;dashPattern=1 1;" edge="1" parent="1" source="PBcIXkFHgragpKWVIyf9-1548" target="1515">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="PBcIXkFHgragpKWVIyf9-1548" value="OSCAL Assessment Plan" style="shape=document;whiteSpace=wrap;html=1;boundedLbl=1;strokeColor=#2F5B7C;" vertex="1" parent="1">
+          <mxGeometry x="900" y="1030" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="PBcIXkFHgragpKWVIyf9-1552" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;strokeColor=#2F5B7C;dashed=1;dashPattern=1 1;" edge="1" parent="1" source="PBcIXkFHgragpKWVIyf9-1549">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1180" y="920" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PBcIXkFHgragpKWVIyf9-1549" value="OSCAL Assessment Result" style="shape=document;whiteSpace=wrap;html=1;boundedLbl=1;strokeColor=#2F5B7C;" vertex="1" parent="1">
+          <mxGeometry x="1220" y="1030" width="120" height="80" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
