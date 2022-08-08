@@ -19,6 +19,37 @@ git push -u otherremote local-branch-name:upstream-branch-name
 
 Source: [StackOverflow](https://stackoverflow.com/a/36139325)
 
+### GitHub
+
+#### Viewing and Deleting GitHub Actions Caches
+
+There is currently no UI fearure that allows an authenticated and authorized GitHub user to check or delete one or more caches from GitHub Actions workflows. However, a user can use a Personal Access Token (PAT) with the REST API.
+
+Below is a `curl` example to view all existing caches for a repo with name `reponame` belonging to `owner`.
+
+```sh
+  # This is prefixed with spaces to prevent being saved in your shell history.
+  # CONFIGURE YOUR SHELL ACCORDINGLY!
+  export GH_TOKEN="ghp_GITHUB_TOKEN_FOO_BAR_BAZ"
+curl \
+  -H "Accept: application/vnd.github.v3+json" \
+  -H "Authorization: token ${GH_TOKEN}" \
+  https://api.github.com/repos/owner/reponame/actions/caches
+```
+
+Below is a `curl` example to view delete a particular caches for a repo with name `reponame` belonging to `owner` with a given numeric cache ID. The ID can be retrieved with the `curl` command above.
+
+```sh
+  # This is prefixed with spaces to prevent being saved in your shell history.
+  # CONFIGURE YOUR SHELL ACCORDINGLY!
+  export GH_TOKEN="ghp_GITHUB_TOKEN_FOO_BAR_BAZ"
+curl \
+  -X DELETE \
+  -H "Accept: application/vnd.github.v3+json" \
+  -H "Authorization: token ${GH_TOKEN}" \
+  https://api.github.com/repos/owner/reponame/actions/caches/10
+```
+
 ### Golang
 
 #### `go mod`: could not read Username for 'https://github.com'
