@@ -349,6 +349,14 @@ Source: [StackOverflow](https://askubuntu.com/a/175547)
 
 ## AWS
 
+### API Gateway
+
+After not quickly finding it in the docs, a colleague found out for me you can export the Swagger/OpenAPI specification of a custom REST API current deployed in API Gateway, whether made with the web console or programatically.
+
+```sh
+aws apigateway get-export --parameters extensions='apigateway' --rest-api-id abc1defghi --stage-name prod --export-type swagger latestswagger2.json --region us-east-1
+```
+
 ### Managed Blockchain
 
 #### Deleting Networks
