@@ -99,6 +99,31 @@ curl \
 
 Sometimes, you will want to debug a syntax issue or logic problem with the bound values of variables in an inline `bash` or similar shell script in a GHA workflow. Without much modification, below is a before and after of how to achieve that.
 
+Before:
+
+
+```sh
+- name: Problem shell stuff run without debugging mode
+  shell: bash
+  run: |
+    command1
+    command2
+    command3
+```
+
+After:
+
+```sh
+- name: Problem shell stuff run with debugging mode
+  shell: bash -x
+  run: |
+    cat <<'EOF' | bash -x
+    command1
+    command2
+    command3
+    EOF
+```
+
 Source: [Nikita Wootten when pairing on project work](https://github.com/usnistgov/blossom-case-study/pull/20/commits/22cbaaf198e6e0964a5dbe25a36a6ad7583c7927) resulting [from this StackOverflow post](https://stackoverflow.com/a/61648513)
 
 ### Golang
