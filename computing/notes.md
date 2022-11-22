@@ -46,6 +46,20 @@ git push -u otherremote local-branch-name:upstream-branch-name
 
 Source: [StackOverflow](https://stackoverflow.com/a/36139325)
 
+#### Reporting commit datetime timestamps for finding newer and older files with `git`
+
+In almost all cases, a `git` repo does not change access and file modification datetime timestamps in directories checked in a normal (e.g. not "bare") clone of a repository. For CI/CD automation, the end result is using `[[ path/to/file1.ext -n path/to/file2.ext ]]` with `bash` or supporting POSIX shells will not support business logic based on which files are older, newer, or edited contemporaneously. So, to do file edit comparisons with filesystem access and modification timestamps modified through `git`, you can do the following in shell scripts.
+
+```sh
+export FILE1_TIMESTAMP=$(git log --pretty=format:%cd --date=format:%Y%m%d%H%m%S path/to/repo/file1.ext)
+export FILE2_TIMESTAMP=$(git log --pretty=format:%cd --date=format:%Y%m%d%H%m%S path/to/repo/file2.ext)
+if [[ FILE1_TIMESTAMP -gt  FILE2_TIMESTAMP ]]; then
+  echo "Some logic because file1.ext is newer"
+fi
+```
+
+Source: [StackOverflow](https://stackoverflow.com/a/36243002)
+
 ### GitHub
 
 #### Verified Commits with SSH Keys
@@ -80,19 +94,6 @@ curl \
   -H "Authorization: token ${GH_TOKEN}" \
   https://api.github.com/repos/owner/reponame/actions/caches/10
 ```
-#### Reporting commit datetime timestamps for finding newer and older files with `git`
-
-In almost all cases, a `git` repo does not change access and file modification datetime timestamps in directories checked in a normal (e.g. not "bare") clone of a repository. For CI/CD automation, the end result is using `[[ path/to/file1.ext -n path/to/file2.ext ]]` with `bash` or supporting POSIX shells will not support business logic based on which files are older, newer, or edited contemporaneously. So, to do file edit comparisons with filesystem access and modification timestamps modified through `git`, you can do the following in shell scripts.
-
-```sh
-export FILE1_TIMESTAMP=$(git log --pretty=format:%cd --date=format:%Y%m%d%H%m%S path/to/repo/file1.ext)
-export FILE2_TIMESTAMP=$(git log --pretty=format:%cd --date=format:%Y%m%d%H%m%S path/to/repo/file2.ext)
-if [[ FILE1_TIMESTAMP -gt  FILE2_TIMESTAMP ]]; then
-  echo "Some logic because file1.ext is newer"
-fi
-```
-
-Source: [StackOverflow](https://stackoverflow.com/a/36243002)
 
 ### Golang
 
