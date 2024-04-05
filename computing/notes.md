@@ -171,3 +171,9 @@ The error will be similar to below.
 This is because you specifically quoted the region name `"us-east-1"` and packer interprets that as the name of the region literally.
 
 You will want to ensure it is set as `-var "aws_region=us-east-1"` (observe no quoting after the equal sign) or you will receive this cryptic error.
+
+### Terraform
+
+#### Lockfile Troubleshooting with Failures of Terraform 1.x and `terraform init`
+
+There appears to be some history around plugin resolution in "mirror directories" and cache directories, depending on how you configure your system. See [terraform/#29696](https://github.com/hashicorp/terraform/issues/29696) for current context on the issue.
