@@ -21,6 +21,11 @@ Discussion of assessment is complicated because, in the security industry primar
 ##### 800-37r2
 
 <details>
+<summary>Use of Automation in the Execution of the RMF</summary>
+Organizations should maximize the use of automation, wherever possible, to increase the speed, effectiveness, and efficiency of executing the steps in the Risk Management Framework (RMF). Automation is particularly useful in the assessment and continuous monitoring of controls, the preparation of authorization packages for timely decision-making, and the implementation of ongoing authorization approaches—together facilitating a real-time or near real-time risk-based decision-making process for senior leaders. Organizations have significant flexibility in deciding when, where, and how to use automation or automated support tools for their security and privacy programs. In some situations, automated assessments and monitoring of controls may not be possible or feasible.
+</details>
+
+<details>
 <summary>Is a RMF Assessment temporal or can it be reused? (RMF 800-37 Assessment Step FAQ)</summary>
 Can results from a previous control assessment be leveraged for (re-)authorization purposes? It may be possible to leverage recent control assessment results provided that the assessment was conducted according to
 organizationally accepted assessment methodologies and depending on what was assessed and how much time elapsed since the
