@@ -2,6 +2,23 @@
 
 ## Programming Languages and Development Tools
 
+### ~git~
+
+#### Push from local branch to remote origin branch with different name
+
+If you are likely using this for code in a pull request off a fork from a user that is not a member of the [usnistgov organization](https://github.com/usnistgov) and want to help edit with them directly, make sure [the user has toggled on the PR to allow maintainers to edit](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/allowing-changes-to-a-pull-request-branch-created-from-a-fork).
+
+```sh
+git remote add otherremote git@github.com:otheruser/repo.git
+git fetch otherremote
+git checkout -b local-branch-name --track otherremote/upstream-branch-name
+git add file.txt
+git commit -m "Some updates need to be pushed."
+git push -u otherremote local-branch-name:upstream-branch-name
+```
+
+Source: [StackOverflow](https://stackoverflow.com/a/36139325)
+
 ### Golang
 
 #### `go mod`: could not read Username for 'https://github.com'
