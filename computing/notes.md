@@ -95,6 +95,30 @@ $ # Returns 0 because the document is valid.
 
 [Source: usnistgov-OSCAL/Lobby conversation on Gitter](https://gitter.im/usnistgov-OSCAL/Lobby?at=62263d32257a3578251a9a21)
 
+### Oxygen XML Editor
+
+#### Oxygen XML Editor 24.1 and XML Calabash 1.3.2-100 Bug with `<p:with-param>` arguments
+
+When reviewing a code change with a XProc 1.0 pipeline file (.xpl file), the pipeline worked on another developer's computer, but not mine (XML Editor 24.1, build 2022030807 with XML Calabash 1.3.2-100). The following error was returned in the IDE's error message list in the Results Window.
+
+> err:XD0023 : The supplied node has been schema-validated, but the XPath expression was compiled without schema-awareness It is a dynamic error if an XPath expression is encountered which cannot be evaluated (because it is syntactically incorrect, contains references to unbound variables or unknown functions, or for any other reason).
+
+The offending code is here:
+
+```xml
+<p:xslt name="finalized-catalog">
+  <p:with-param name="xslt-process" select="'SP800-53 (Rev5) OSCAL CONVERSION'"/>
+  <p:input port="stylesheet">
+    <p:document href="oscal-finalize.xsl"/>
+  </p:input>
+    
+</p:xslt>
+```
+
+When running the pipeline with the released JAR in a Linux-based OCI container with XML Calabash 1.4.1-100 it did work. Removing the unused param was a temporary workaround and upgrading to the current release of Oxygen XML Editor 24.x with XML Calabash 1.4.1-100 bundled in resolved the issue.
+
+More details can be found in [ndw/xmlcalabash1#297](https://github.com/ndw/xmlcalabash1/issues/297).
+
 ### Visual Studio 2022
 
 #### Nuget Package Manager Stuck in Offline Mode
