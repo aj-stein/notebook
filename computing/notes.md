@@ -95,6 +95,12 @@ curl \
   https://api.github.com/repos/owner/reponame/actions/caches/10
 ```
 
+#### Debugging shell commands in a GitHub Actions workflow step with `bash -x` by running inline
+
+Sometimes, you will want to debug a syntax issue or logic problem with the bound values of variables in an inline `bash` or similar shell script in a GHA workflow. Without much modification, below is a before and after of how to achieve that.
+
+Source: [Nikita Wootten when pairing on project work](https://github.com/usnistgov/blossom-case-study/pull/20/commits/22cbaaf198e6e0964a5dbe25a36a6ad7583c7927) resulting [from this StackOverflow post](https://stackoverflow.com/a/61648513)
+
 ### Golang
 
 #### `go mod`: could not read Username for 'https://github.com'
