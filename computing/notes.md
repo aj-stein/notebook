@@ -111,3 +111,56 @@ comprised by these nodes will delete itself.
 ## Azure
 
 ## GCP
+
+## Tools
+
+### Packer
+
+#### Error Validating Regions Missing Endpoints Error
+
+If you are using the `amazon-ebs` provider with current versions of `packer` (1.7.8) of this writing, and you have a packer configuration and pass in the AWS region with a parameterized variable like so you will get an error.
+
+```sh
+cat << EOF > example.json
+{
+    "variables": {
+        "aws_profile": "",
+        "aws_region": "",
+        "prefix": "",
+        "gold_image_id": "",
+        "instance_type": "",
+        "kms_key_id": "alias/aws/ebs",
+        "ssh_username": "ec2-user",
+        "target_vpc_id": "",
+        "packer_subnet_id": "",
+        "packer_security_group_id": ""
+    },
+    "builders": [
+        {
+            "type": "amazon-ebs",
+            "profile": "{{user `aws_profile`}}",
+            "region": "{{user `aws_region`}}",
+            "source_ami": "{{user `gold_image_id`}}",
+            "instance_type": "{{user `instance_type`}}",
+            "ssh_username": "{{user `ssh_username`}}",
+            "ami_name": "{{user `prefix`}}-peer-node-{{timestamp}}",
+        }
+    ],
+    "provisioners": [
+        {
+            "type": "shell",
+            "inline": ["sleep 10"]
+        }
+    ]
+}
+EOF
+packer -var 'aws_region="us-east-1"' example.json
+```
+
+The error will be similar to below.
+
+> MissingEndpoint: 'Endpoint' configuration is required for this service
+
+This is because you specifically quoted the region name `"us-east-1"` and packer interprets that as the name of the region literally.
+
+You will want to ensure it is set as `-var "aws_region=us-east-1"` (observe no quoting after the equal sign) or you will receive this cryptic error.
