@@ -192,6 +192,74 @@ ANSIBLE_ENABLE_TASK_DEBUGGER=True ansible-playbook \
     -i inventory playbook.yml
 ```
 
+#### Encoding JSON for Storage with `aws`, `bash`, and `jq`
+
+The need for this first occurred for me with taking inputs from the `aws` CLI, transforming it with a JMESPath query directly, potentially also transforming it with `jq`, using `jq` to escape all the `"` characters to turn the JSON value into a string form that can be saved in something AWS SSM Parameter store. I prefer note to Base64 encode the data as it is not transparent or easy for developers to spot check.
+
+There are alternative solutions with a variety of tools, but many of them are not ideal.
+
+So, here is an example.
+
+```sh
+$ aws ec2 describe-instances \
+  --query \
+  'Reservations[].Instances[?contains([`ec2-server-name`], Tags[?Key==`Name`].Value[] | [0])][].{ InstanceId: InstanceId PrivateIpAddress: PrivateIpAddress}' \
+  | jq -c # make output compact on one line
+[{"InstanceId":"i-0123456789012","PrivateIpAddress":"10.1.2.3"}]
+```
+
+So what happens when you want to set this result as a variable and more safely pass it, in stringified form, to bind it to a `bash` variable and use in further API queries and responses that require str in some casesings and do so without potential encoding errors from missing escaped control characters? If you have JSON with spaces between keys and values, `{"name":"value"}` will work but `{ "name" : "value" }` will throw errors.
+
+```sh
+$ HOST=$(aws ec2 describe-instances \
+  --query \
+  'Reservations[].Instances[?contains([`ec2-server-name`], Tags[?Key==`Name`].Value[] | [0])][].{ InstanceId: InstanceId PrivateIpAddress: PrivateIpAddress}')
+$ echo $HOST
+[ { "InstanceId": "i-0123456789012", "PrivateIpAddress": "10.1.2.3" } ]
+```
+For the sake of argument, let us try to use this data and and bind it to the value of a AWS SSM Parameter. This service in AWS allows the secure and permissioned storage of values, but only offers `String`, `StringList`, and `SecureString` storage. You cannot save JSON directly or other complex objects, you must encode them as a string. To do this safely, you can use `jq`'s [`fromjson` and `tojson` methods](https://stedolan.github.io/jq/manual/#example70) to do this.
+
+The above value will cause an error.
+
+```sh
+$ aws ssm put-parameter --name "/path/to/key" --overwrite --value $HOST
+Unknown options: "InstanceId":, "i-0123456789012",, "PrivateIpAddress":, "10.1.2.3", }, ], {
+
+$ # What if we don't use the variable and do it inline?
+
+$ aws ssm put-parameter --name "/path/to/key" --overwrite --value $(aws ec2 describe-instances --query 'Reservations[].Instances[?contains([`ec2-server-name`], Tags[?Key==`Name`].Value[] | [0])][].{ InstanceId: InstanceId PrivateIpAddress: PrivateIpAddress}')
+Unknown options: "InstanceId":, "i-0123456789012",, "PrivateIpAddress":, "10.1.2.3", }, ], {
+
+$ # Weird still the same odd error, how can this be!?
+```
+
+So we need to encode the argument as a string to safely pass and not worrry about quotation marks, control characters, and unforseen spaces in output that will lead to encoding errors.
+
+
+```sh
+$ aws ssm put-parameter --name "/path/to/key" --overwrite --value --overwrite --value $(aws ec2 describe-instances --query 'Reservations[].Instances[?contains([`ec2-server-name`], Tags[?Key==`Name`].Value[] | [0])][].{ InstanceId: InstanceId PrivateIpAddress: PrivateIpAddress}' | jq -c '. | tojson')
+
+
+$ aws ssm get-parameter --name /path/to/key --with-decryption
+{
+    "Parameter": {
+        "Name": "/path/to/key",
+        "Type": "SecureString",
+        "Value": "\"[{\\\"InstanceId\\\":\\\"i-0123456789012\\\",\\\"PrivateIpAddress\\\":\\\"10.1.2.3\\\"}]\"",
+        "Version": 10,
+        "LastModifiedDate": 1641402406.47,
+        "ARN": "arn:aws:ssm:us-east-1:0123456789012:parameter/path/to/key",
+        "DataType": "text"
+    }
+}
+
+$ aws ssm get-parameter --name /path/to/key --with-decryption | jq -r '.Parameter?.Value? | fromjson' | jq -r .[].InstanceId?
+
+i-00219c313f1b09394
+```
+
+
+Source: [The GitHub project for `jq`, specifically issue #1918](https://github.com/stedolan/jq/issues/1918#issuecomment-498968907)
 #### Cloudwatch Log Analysis with `cw`
 
 The `cw` tool is wonderful for quickly analyzing AWS CloudWatch logs in the console.
