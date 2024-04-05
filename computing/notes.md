@@ -66,6 +66,7 @@ I recommend using [`asdf`](https://asdf-vm.com/guide/getting-started.html#_3-ins
 
 - [asdf-golang](https://github.com/kennyp/asdf-golang)
 - [asdf-nodejs](https://github.com/asdf-vm/asdf-nodejs)
+- [asdf-hashicorp](https://github.com/Banno/asdf-hashicorp.git) for `terraform`
 
 You can vet and install the right plugin, but then follow the same workflow across tools.
 
