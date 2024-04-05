@@ -97,6 +97,16 @@ asdf install langname latest
 asdf global langname latest
 ```
 
+#### Enforce Connection Timeouts with SSH Clients
+
+If you need to test timeouts, the OpenSSH `ssh` client takes a long time. You can enforce shorter timeouts for testing.
+
+```sh
+git -vv -o ConnectTimeout=10 -o BatchMode=yes -T git@github.com # Exit with error if not connected in 10 seconds
+```
+
+Source: [StackOverflow](https://stackoverflow.com/a/11283798)
+
 #### OpenSSL Decode Certificate
 
 ```
