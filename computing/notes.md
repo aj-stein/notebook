@@ -242,11 +242,22 @@ New-ItemProperty -Path $kbLayout -Name "Scancode Map" -PropertyType Binary -Valu
 
 Source: [StackOverflow](https://superuser.com/a/997448)
 
-#### SSH Agent Socket Forwarding from WSL to Windows with Keeagent
+#### SSH Agent Socket Forwarding from Windows to WSL with Keeagent
 
 Install `npiperelay.exe` and `wsl-ssh-agent-gui.exe` per [this forked guide](https://gist.github.com/aj-stein-nist/9218062c0a1a2b717a8800f92a8de245).
 
 Source: [Original guide from strasis](https://gist.github.com/strarsis/e533f4bca5ae158481bbe53185848d49#file-howto-md)
+
+#### SSH Agent Socket Forwarind from Windows to WSL Broken
+
+If you receive errors where an unlocked KeePass installation with KeeAgent fails, go into the WSL2 instance running. Determine if `socat` is running with the `npiperelay` utility and if so, kill the process and let it restart in a new shell to restore bi-directional SSH agent access.
+
+```
+$ pgrep -a -f npipe
+123456 socat UNIX-LISTEN:/home/myusername/.ssh/agent.sock,fork EXEC:/path/to/where/you/installed/npiperelay.exe -ei -s //./pipe/openssh-ssh-agent,nofork
+$ killall socat
+$ exit # and open a new shell
+```
 
 #### WSL Ubuntu Defaults for `git` and `core.fileMode`
 
