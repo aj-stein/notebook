@@ -42,6 +42,28 @@ git config --global --add url."git@github.com:".insteadOf "https://github.com/"
 
 Source: [StackOverflow](https://stackoverflow.com/a/44247040)
 
+### Javascript, JSON, and JSON Schema
+
+#### Running `ajv` with `date-time` and non-core JSON Schema Types
+
+If you use the [ajv library](https://github.com/ajv-validator/ajv/commit/95b15b683dfb60f63c5129b0426629b968d53af8) and/or [the `ajv-cli` command-line utility](https://github.com/ajv-validator/ajv-cli/commit/58d6f074720d5dc0773c3786320b7d35718060cd), either will not work for many common data types that are not default in the core ajv library, for things like `date-time` to serialize timestamps. You will get an error similar to this.
+
+```sh
+$ npx ajv validate -s schema.json -d schema-valid-document.json
+schema schema.json is invalid
+error: unknown format "date-time" ignored in schema at path "#field_elementname-must-be-date-time"
+```
+
+You must install the [the companion ajv-formats library](https://github.com/ajv-validator/ajv-formats/commit/4dd65447575b35d0187c6b125383366969e6267e) and specify [the `-c` custom module parameter and explicitly include the ajv-formats library at runtime](https://github.com/ajv-validator/ajv-cli/commit/aa30c1bf919d3be3a1ba5d9b22b6f5c71ede1da5) to include date-time and other necessary (but not default in core) data types.
+
+```sh
+$ npm install -g ajv-formats && npx ajv validate -s schema.json -d schema-valid-document.json -c ajv-formats
+$ echo $? 
+$ # Returns 0 because the document is valid.
+```
+
+[Source: usnistgov-OSCAL/Lobby conversation on Gitter](https://gitter.im/usnistgov-OSCAL/Lobby?at=62263d32257a3578251a9a21)
+
 ### Visual Studio 2022
 
 #### Nuget Package Manager Stuck in Offline Mode
