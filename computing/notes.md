@@ -4,6 +4,33 @@
 
 ### `git`
 
+#### Configure SSH public key signing of commits
+
+If you want to apply everywhere, consider `git config --global ...` with arguments below.
+
+NOTE: You do need to have a current version of `git` 2.x for the `gpg.format` ssh option it seems from 
+
+```sh
+git config commit.gpgsign true
+git config gpg.format ssh
+git config tag.gpgsign true
+git config user.signingkey $(cat path/to/signing_key.pub)
+```
+
+Later you can configure this [in GitHub to show your commits as verified and coming from you](#verified-commits-with-ssh-keys).
+
+Source: [GitHub Docs](https://docs.github.com/en/authentication/managing-commit-signature-verification/telling-git-about-your-signing-key#telling-git-about-your-ssh-key)
+
+#### Sign co-authored commits from before signing configuration
+
+This threw me into a loop. You need to sign off when amending commits co-authored by co-workers.
+
+If you simply run `git commit --amend -S` to sign, it will not sign the commit and silently complete.
+
+```sh
+git commit --amend --sign-off
+```
+
 #### Push from local branch to remote origin branch with different name
 
 If you are likely using this for code in a pull request off a fork from a user that is not a member of the [usnistgov organization](https://github.com/usnistgov) and want to help edit with them directly, make sure [the user has toggled on the PR to allow maintainers to edit](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/allowing-changes-to-a-pull-request-branch-created-from-a-fork).
@@ -20,6 +47,10 @@ git push -u otherremote local-branch-name:upstream-branch-name
 Source: [StackOverflow](https://stackoverflow.com/a/36139325)
 
 ### GitHub
+
+#### Verified Commits with SSH Keys
+
+When configuring [SSH public keys for commit signing with `git`](#configure-ssh-public-key-signing-of-commits), you can pair it with a configuration in [GitHub to show your commits as verified](https://docs.github.com/en/authentication/managing-commit-signature-verification/about-commit-signature-verification#ssh-commit-verification).
 
 #### Viewing and Deleting GitHub Actions Caches
 
