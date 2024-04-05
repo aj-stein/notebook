@@ -1,5 +1,30 @@
 # Notes for Development on NIST Workstations
 
+## Programming Languages and Development Tools
+
+### Golang
+
+#### `go mod`: could not read Username for 'https://github.com'
+
+This was a frustrating one reported by colleages that I had not seen before.
+
+```sh
+$ cd $GOPATH
+$ go get github.com/examplesite/myprivaterepo
+$ git clone https://github.com/examplesite/myrepo
+Cloning into '/path/to/gopath/src/github.com/examplesite/mepo'...
+fatal: could not read Username for 'https://github.com': terminal prompts disabled
+package github.com/examplesite/myprivaterepo: exit status 128
+```
+
+Solution is fixing evolving defaults for `git` to prefer `SSH` over HTTPS unless specified.
+
+```sh
+git config --global --add url."git@github.com:".insteadOf "https://github.com/"
+```
+
+Source: [StackOverflow](https://stackoverflow.com/a/44247040)
+
 ## Windows
 
 ### Windows Subsystem for Linux
