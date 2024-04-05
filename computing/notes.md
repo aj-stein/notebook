@@ -154,12 +154,13 @@ cat << EOF > example.json
     ]
 }
 EOF
-packer -var 'aws_region="us-east-1"' example.json
+packer build -var 'aws_region="us-east-1"' example.json
 ```
 
 The error will be similar to below.
 
-> MissingEndpoint: 'Endpoint' configuration is required for this service
+> ==> Some builds didn't complete successfully and had errors:
+> --> amazon-ebs: error validating regions: MissingEndpoint: 'Endpoint' configuration is required for this service
 
 This is because you specifically quoted the region name `"us-east-1"` and packer interprets that as the name of the region literally.
 
