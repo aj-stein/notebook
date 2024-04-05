@@ -394,6 +394,16 @@ openssl req -noout -text -in /tmp/test.csr
 
 ### Debian/Ubuntu
 
+#### Installation Dependencies for Python 3.9.x (and earlier) with ~asdf~
+
+```sh
+sudo apt-get update; sudo apt-get install make build-essential libssl-dev zlib1g-dev \
+libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm \
+libncursesw5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev
+```
+
+Source: [GitHub](https://github.com/asdf-community/asdf-python/issues/119#issuecomment-1000958539)
+
 #### Listing Files in .deb packages
 
 ```
