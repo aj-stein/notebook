@@ -83,6 +83,7 @@ user_pref("network.negotiate-auth.trusted-uris", "auth.nist.gov,sts.nist.gov,sts
 
 I recommend using [`asdf`](https://asdf-vm.com/guide/getting-started.html#_3-install-asdf) and the following plugins for language runtime management. I do this instead of installing one unique tool per runtime (`nvm` for `node`, `rvm` for `ruby`, et cetera).
 
+- [asdf-cf](https://github.com/mattysweeps/asdf-cf)
 - [asdf-golang](https://github.com/kennyp/asdf-golang)
 - [asdf-nodejs](https://github.com/asdf-vm/asdf-nodejs)
 - [asdf-hashicorp](https://github.com/Banno/asdf-hashicorp.git) for `terraform`
