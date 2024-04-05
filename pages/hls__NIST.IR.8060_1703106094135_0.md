@@ -1,0 +1,2 @@
+file:: [NIST.IR.8060_1703106094135_0.pdf](../assets/NIST.IR.8060_1703106094135_0.pdf)
+file-path:: ../assets/NIST.IR.8060_1703106094135_0.pdf

@@ -1,0 +1,19 @@
+- ![National-Strategy-on-Microelectronics-Research-March-2024.pdf](../assets/National-Strategy-on-Microelectronics-Research-March-2024_1710871730688_0.pdf)
+	- Goals: ((65f9d4d2-532f-4a9a-adb9-bba6b8a6bd87))
+	- Follow-up to previous report, this one focused on semi-conductors as referenced from: ((65f9d51f-f454-4221-bbc2-8614c35a4eba))
+	- Key takeaways from the goals and objectives:
+		- ((65f9d583-10a3-4396-8d8e-59748902f94e))
+		- ((65f9d591-031c-441d-9bc8-ac026b2dbad8))
+		- ((65f9d5b0-6fad-4d78-a143-b6406e6fbe6f))
+	- ((65f9d5c7-fa3a-4df5-a197-9e4fd856d8c1))
+	- ((65f9d773-2c65-4ae0-9878-b1d4dbce98be))
+	- ((65f9d7d3-7e56-49ed-9331-535eea1baae6))
+	- ((65f9d7e8-298a-4c3a-bc36-7846b008e9c2))
+	- ((65f9d812-4e7a-4e67-83ad-a47bfb952b02))
+	  id:: 65f9d7ec-9b0a-486d-9fa6-4edf8134386f
+	- ((65f9d854-003e-408c-a98a-d671cee654e3))
+	- ((65f9d866-d391-4950-852c-9806e6180472))
+	- ((65f9d885-dbff-48a0-acb0-3fdc966455a3))
+	- ((65f9d947-82cd-474f-a9e8-fc6179fad65e))
+	- ((65f9d95c-9395-4b58-9007-f094e0661361))
+	-

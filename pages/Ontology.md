@@ -1,0 +1,17 @@
+- ![An ontology for reasoning over engineering textual data stored in FMEA spreadsheet tables](../assets/1-s2.0-S0166361521001032-main_1711737809991_0.pdf)
+  collapsed:: true
+	- ((66070dfe-acbc-4427-8fbb-1d05855a65b7))
+	- ((66071314-8d66-4d66-935c-a39e35fb402e))
+	- ((66071340-48a3-4bdb-bc1c-167759a5f356))
+	- ((66071d52-ca79-4cc2-8676-4e2568d9e8c7))
+	- Criticality needs to be added to ontology but appears to be subjective human factor chosen by experts: ((66072311-34b8-487e-aafa-82f0dff07053))
+	- ((6607234e-c5f8-4836-9d38-f7d17c33a4a3))
+	- ((6607235d-9a1b-4a77-ac35-d4fbb46ccb89))
+	- Engineers are bigger proponents of shared development and cross-polination for ontologies: ((66072387-f006-4b16-b4f0-57a85a5c464f))
+	-
+- ![Skills, Rules, and Knowledge; Signals, Signs, and Symbols, and Other Distinctions in Human Performance Models](../assets/Skills_rules_and_knowledge_signals_signs_and_symbols_and_other_distinctions_in_human_performance_models_1711743957723_0.pdf)
+	- Cybernetics is king: ((6607240c-2633-40c0-bb6f-4a867c176d41))
+	- ((66072424-9480-4d57-ad37-85d486218687))
+	- ((66072436-5c08-43dc-aef3-0958194d85cf))
+	- Cross-reference models and measure their relevance and impact -> risk-informed and threat modeled cybernetics for the real world? ((66072447-b44f-461b-9c66-11b956d1d89d))
+	-
