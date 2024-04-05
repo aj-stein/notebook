@@ -124,7 +124,7 @@ asdf global langname latest
 
 #### Wildcard Patterns for SSH `StrictHostKeyChecking` and Ephemeral Servers
 
-Using a lot of ephemeral cloud servers accessible from an AWS ELB or something similar? I do. I got tired of fixing up my `~/.ssh/known_hosts` file and adding `-o StrictHostKeyChecking=no` every time I ran a command, so I checked and ~/ss
+Using a lot of ephemeral cloud servers accessible from an AWS ELB or something similar? I do. I got tired of fixing up my `~/.ssh/known_hosts` file and adding `-o StrictHostKeyChecking=no` every time I ran a command, so I checked and `~/ssh/config` supports wildcards more thoroughly than I recalled.
 
 ```sh
 cat << EOF >> ~/.ssh/config # double carrots to not clobber existing stuffs
