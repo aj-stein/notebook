@@ -6,5 +6,5 @@ If you are here, you probably want to understand why I do what I do with OSCAL a
 
 # Topics
 
-- Techniques, tactics and procedures for risk management and security assessment
+- [Techniques, tactics and procedures for risk management and security assessment](./research/assessment-ttps.md)
 - Private blockchains for encoding security and risk management data
