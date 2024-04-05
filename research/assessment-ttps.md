@@ -29,6 +29,34 @@ Why assess controls?
 There are two primary motivations for assessing security and privacy controls: 1) to ensure that the security and privacy controls for managing risk are in place and producing the desired outcomes and 2) to provide the authorizing official with the information needed to make an authorization decision. Control assessment verifies that the safeguards are in place and working as planned, providing system management and Authorizing Officials with an overall security and privacy posture of the system. Control assessments may be conducted as controls are implemented in early stages of the system development in order to identify issues with controls early in the development process.
 </details>
 
+<details>
+<summary>Assessor Criteria (800-37 Assessment Step FAQ)</details>
+Who assesses the controls?
+The assessment of security and privacy controls is conducted by assessors who are not only familiar with the Risk Management Framework and the controls in the NIST SP 800-53 [SP 800-53r5] control catalog but are also proficient in conducting control effectiveness assessments per NIST SP 800-53A [SP 800-53A] or equivalent. Preferably, the assessor should understand (or be capable of understanding) the system to be assessed, including its business/mission and operating environment, among other items. It may be necessary for assessors to possess specialized skills or knowledge to help ensure that assessment results are reflective of the actual current system security and privacy posture (e.g., if the system includes database services, the assessor should be knowledgeable about the particular database in use). Controls implemented to achieve both security and privacy objectives may require a degree of collaboration between security and privacy control assessors. An independent, third-party assessor is not required to assess systems categorized as low impact but is required to assess moderate and high impact systems to maintain impartiality. In accordance with OMB Circular A-130 [OMB A130], the senior agency official for privacy serves as the control assessor for the privacy controls and is responsible for conducting an initial assessment of the privacy controls prior to system operation and for assessing the controls periodically thereafter at a frequency sufficient to ensure compliance with privacy requirements and to manage privacy risks. The senior agency official for privacy can delegate the assessment functions, consistent with applicable policies. An independent evaluation of privacy controls is not required. However, an organization may choose to employ independent privacy assessments at the organization’s discretion.
+
+How are assessors selected?
+Assessors are selected for their technical expertise related to the type of system or component they are assessing as well as for their experience in all steps of the Risk Management Framework, including the assessment and authorization steps and the tasks that support them. 
+
+Why is assessor independence important?
+Assessors need to be free of any undue influence from officials associated with the systems, components, and organization whose controls are being assessed. Assessors need to make impartial decisions on security and privacy assessment results and provide the authorizing official with unbiased information so that informed risk-based decisions concerning the system and the organization can be made. In accordance with OMB Circular A-130 [OMB A130], an independent evaluation of the privacy program and practices is not required. However, an organization may choose to employ independent privacy assessments at its discretion. For more information, see NIST SP 800-53, Revision 5, CA-2(1) CONTROL ASSESSMENTS | INDEPENDENT ASSESSORS [SP 800-53r5], and NIST SP 800-53B [SP 800-53B]. 
+</details>
+
+<details>
+<summary>Re the value of self-assesment for RMF Control Assessment (800-37 Assessment Step FAQ)</summary>
+Organizations can conduct self-assessments with two caveats. First, while internal assessors can be employed to conduct self-assessments, assessors should not conduct assessments under the management control of their supervisors. While it may not be considered a conflict of interest, undue influence by supervisors may create scenarios in which deficiency information may be affected. Second, self-assessments can be used to assess low impact systems, while independent assessors should be employed for moderate and high impact systems. Even though self-assessments may be conducted for low impact systems, the assessor’s technical expertise and required skills should be at the same level as the assessment for moderate and high impact systems. In accordance with OMB Circular A-130 [OMB A130], an independent assessment of privacy controls is not required. For more information, see NIST SP 800-53, Revision 5, CA-2(1) CONTROL ASSESSMENTS | INDEPENDENT ASSESSORS [SP 800-53r5], and NIST SP 800-53B
+[SP 800-53B].
+</details>
+
+<details>
+<summary>Using self-assessment in the Develop Phase of the SDLC (800-37 Assessment Step FAQ)</summary>
+Can controls be applied and assessed during the development process?
+Yes, identifying security and privacy requirements, selecting and implementing controls, and assessing implemented controls for effectiveness during the development phase of the system development life cycle (SDLC) is an efficient and effective process for reducing risk to the system, component, and the organization. Controls should be implemented during the development phase of the SDLC to verify that they meet requirements and produce expected outcomes. Conducting control assessments during the development phase of the SDLC provides efficiency as security and privacy requirements are identified and recorded and corresponding controls are identified, implemented, and assessed, thereby reducing risks to the system, component, and organization. Common controls identified prior to system development can also be incorporated into the SDLC.
+
+Can the results of control assessments conducted during the system development life cycle be
+used?
+Yes, the results of security and privacy control assessments conducted during the system development life cycle (SDLC) can be used for the authorization package. If assessments conducted during the SDLC identify any deficiencies, these can be captured in the security and privacy plans or be mitigated prior to the assessment. If there are no identified deficiencies from assessments conducted during the SDLC, then these security and privacy controls may not need to be re-assessed. 
+<details>
+
 ##### 800-53A
 
 Does 800-53A mean the same thing when we say assessment framework?
