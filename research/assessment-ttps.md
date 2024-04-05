@@ -20,17 +20,16 @@ results of risk assessments, considering the maturity and quality level of the o
 management processes, and taking advantage of the flexibility in the concepts described in
 this publication.
 
-> Assessment results can be obtained from many activities that occur routinely during the system development life
-cycle. For example, assessment results are produced during the testing and evaluation of new system components
-during system upgrades or system integration activities. Organizations can take advantage of previous assessment
-results whenever possible, to reduce the overall cost of assessments and to make the assessment process more
-efficient.
+> Assessment results can be obtained from many activities that occur routinely during the system development lifecycle. For example, assessment results are produced during the testing and evaluation of new system components during system upgrades or system integration activities. Organizations can take advantage of previous assessment results whenever possible, to reduce the overall cost of assessments and to make the assessment process more efficient.
 
-> If a system component product is identified as providing support for the implementation of a
-particular control in [SP 800-53], then evidence produced during the product testing,
-evaluation, and validation processes (e.g., security or privacy specifications, analyses and test
-results, validation reports, and validation certificates)12 is used to the extent that it is
-applicable.
+> If a system component product is identified as providing support for the implementation of a particular control in [SP 800-53], then evidence produced during the product testing, evaluation, and validation processes (e.g., security or privacy specifications, analyses and test results, validation reports, and validation certificates)12 is used to the extent that it is applicable.
+
+> Organizations carefully consider the potential impacts of employing the assessment procedures defined in this publication when assessing the security and privacy controls in operational systems.
+
+> Product assessments (also known as product testing, evaluation, and validation) are typically conducted by independent, third-party testing organizations. Assessments examine the security and privacy functions of products and established configuration settings. Assessments can be conducted to demonstrate compliance with industry, national, or international information security and privacy standards and developer/vendor claims.
+
+> Establishing an appropriate set of expectations before, during, and after an assessment is paramount to achieving an acceptable
+outcome
 
 </details>
 
