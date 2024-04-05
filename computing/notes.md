@@ -150,6 +150,16 @@ When running the pipeline with the released JAR in a Linux-based OCI container w
 
 More details can be found in [ndw/xmlcalabash1#297](https://github.com/ndw/xmlcalabash1/issues/297).
 
+### PowerShell
+
+#### Check File Hash with Lower-Cased Hexidecimal
+
+Pipelines are annoying, and PowerShell 5.x (the pre-Linux Windows embedded version) will return the `$_.Hash` property of the object in all capital `[A-F]` letters for hexidecimal, making quick copy-paste hash checks difficult.
+
+```powershell
+Get-FileHash C:\path\to\installer.exe -Algorithm SHA512 | Select-Object Hash | Out-String | ForEach-Object {$_.toLower()} | clip.exe
+```
+
 ### Visual Studio 2022
 
 #### Nuget Package Manager Stuck in Offline Mode
