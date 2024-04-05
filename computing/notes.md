@@ -95,3 +95,18 @@ openssl req -noout -text -in /tmp/test.csr
 ```
 dpkg --contents /var/cache/apt/archives/package_name1.2.3-maintainer_sysarch.deb
 ```
+
+# Cloud Developer (AWS, Azure, GCP)
+
+## AWS
+
+### Managed Blockchain
+
+#### Deleting Networks
+
+You do not delete a network, you delete all the member nodes, and then the network
+comprised by these nodes will delete itself.
+
+## Azure
+
+## GCP
