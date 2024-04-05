@@ -66,7 +66,7 @@ Source: [StackOverflow](https://stackoverflow.com/a/1580644).
 
 By default, Firefox (as tested on Windows 10) does not allow automatic single sign-on with NTLM and/or Kerberos environments, either via local Active Directory or Azure's ADFS.
 
-To use Single Sign-on with Firefox, you must enable the Windows Sign-on Settings and enable the relevant trusted authentication URIs. You can go to the `about:config` menu to set these manually _or_ you can update the following settings in your Firefox profile `prefs.js` configuration file.
+To use Single Sign-on with Firefox, you must enable the Windows Sign-on Settings and enable the relevant trusted authentication URIs. You can go to the `about:config` menu to set these manually _or_ you can update the following settings in your Firefox profile `prefs.js` configuration file. This works with Windows 10 and Firefox 95.x releases at the time of this writing.
 
 ```js
 // If this file was empty before you made these modifications, it must start with a comment.
