@@ -127,6 +127,17 @@ openssl req -noout -text -in /tmp/test.csr
 dpkg --contents /var/cache/apt/archives/package_name1.2.3-maintainer_sysarch.deb
 ```
 
+#### Ubuntu's Default Java JDK/JRE Installation Path and `JAVA_HOME`
+
+Ubuntu installs the `default-jdk` and `default-jre` at the path `/usr/lib/jvm/default-java` and provides a symlink.
+
+```sh
+$ ls -l /usr/lib/jvm/default-java
+lrwxrwxrwx 1 root root 25 Jul 17  2019 /usr/lib/jvm/default-java -> java-1.11.0-openjdk-amd64
+```
+
+Source: [StackOverflow](https://askubuntu.com/a/175547)
+
 # Cloud Developer (AWS, Azure, GCP)
 
 ## AWS
