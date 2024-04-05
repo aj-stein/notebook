@@ -155,6 +155,83 @@ comprised by these nodes will delete itself.
 
 ## Tools
 
+### Ansible
+
+#### Testing on Running Instance
+
+I have trouble with the `-l`/`--limit` argument working, so this is how I do this.
+
+To use with `packer`, I set up the `playbook.yml` file like so. The `packer` provision for `ansible` (local or default remote) will [always run it with a host inventory target of `default` unless you override it](https://github.com/hashicorp/packer-plugin-ansible/blob/6cf787294c5745e87cc57e489c6b472c34871ffd/provisioner/ansible/provisioner.go#L117-L120).
+
+```yaml
+---
+- hosts: "{{ ansible_limit | default('default') }}"
+  gather_facts: true
+  become: yes
+  roles:
+    - {
+        role: my-role-name,
+        my-role-name-arg1: yes
+      }
+```
+
+- Set up an `inventory` file in the code (if a `git` repository, add to `.gitignore` and check this works immediately)
+- Modify the inventory to look below, adding relevant IP address and service FQDN entries
+
+```ini
+[default]
+1.2.3.4 1.2.3.5 service.hostname.tld
+```
+
+- Run the playbook interactively like so.
+
+```sh
+# ec2-user if the target(s) are in AWS, change to remote host user accordingly.
+ANSIBLE_ENABLE_TASK_DEBUGGER=True ansible-playbook \
+    --extra-vars "ansible_ssh_user=ec2-user" \
+    -i inventory playbook.yml
+```
+
+#### Conditional Assignment of Task Attributes with `omit` Doesn't Work
+
+And that's by design, folks! Well, at least it as of `ansible [core 2.12.1]`. There is [an issue that covers this](https://github.com/ansible/ansible/issues/14130), and `ansible` devs make it clear, to paraphrase "the tool works just the way it is intended not how reporters expect." I wasted a day on this, so here you go!
+
+```yaml
+- hosts: localhost
+  vars:
+    role_become: yes
+    role_become_user: whomever
+    role_delegate_to: localhost
+  tasks:
+    - name: conditionally run on local workstation with ansible installed or remote target (broken)
+      delegate_to: "{{ role_delegate_to if role_delegate_to is defined else omit }}"
+      become: "{{ role_become is defined | ternary('yes', 'no') }}"
+      become_user: "{{ role_become_user if role_delegate_to is defined else omit }}"
+      shell: whoami
+```
+
+This code will bomd out with an exception every time and not conditionally remove (`omit`) task parameters (`become`, `become_to`, `delegate`, `environment`, et cetera). So you have the fun of just doubling the code twice with a `when` block, or however many times you need it. Code reuse is not happening with this pattern unfortunately.
+
+```yaml
+- hosts: localhost
+  vars:
+    role_become: yes
+    role_become_user: whomever
+    role_delegate_to: localhost
+  tasks:
+    - name: conditionally run on local workstation with ansible installed
+      delegate_to: "{{ role_delegate_to }}"
+      become: yes
+      become_user: "{{ role_become_user }}"
+      shell: whoami
+      when: role_delegate_to is defined # var is defined above, to default to local exec
+
+    - name: conditionally run on remote target
+      become: no
+      shell: whoami
+      when: role_delegate_to is undefined # when is commented out above, run remote
+```
+
 ### Packer
 
 #### Error Validating Regions Missing Endpoints Error
