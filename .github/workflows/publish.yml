@@ -1,4 +1,9 @@
-on: [push]
+name: Publish to web
+
+on:
+  push:
+    branches:
+      - main
 
 permissions:
   contents: write
@@ -8,8 +13,6 @@ jobs:
     name: Publish Logseq graph
     steps:
       - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11
-        with:
-          submodules: true
       - uses: logseq/publish-spa@3fa40f2288e96b5927037610e2445f892a438d79
       - name: Add a nojekyll file # to make sure asset paths are correctly identified
         run: touch $GITHUB_WORKSPACE/www/.nojekyll
