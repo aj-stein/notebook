@@ -2,7 +2,7 @@
 
 ## Programming Languages and Development Tools
 
-### ~git~
+### `git`
 
 #### Push from local branch to remote origin branch with different name
 
