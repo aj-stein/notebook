@@ -20,6 +20,7 @@
 	-
 - ![Open Compute Project Caliptra System on a Chip Root of Trust](../assets/Caliptra_--_Silicon_RoT_Services_09012022_1712759217891_0.pdf)
 	- Theory of operation
+	  collapsed:: true
 		- ((6616a67b-57ae-4aa7-a5ca-501ce0c861c3))
 		- Some of these solutions are either proprietary or aligned to specific parts of an industry standards/consortium/association specifications
 			- [[DMTF]]
@@ -30,6 +31,7 @@
 		- ((6616a6bd-2b58-44ea-9c09-f001413ba2a3))
 		- ((6616a6de-e130-4ea0-a14a-490c715418cf))
 	- Silicon RoT Goals
+	  collapsed:: true
 		- ((6616a71f-7906-4850-b8cd-c08fa424a76c))
 		- ((6616a770-3d9c-4371-9cd0-293b913e8e41))
 			- Definition and design of standard silicon RoT baseline
@@ -47,8 +49,49 @@
 			- Post-manufacturer test and init (e.g. OSAT)
 			- Certification
 	- Use cases
+	  collapsed:: true
 		- Supply chain security
 		- DICE-as-a-Service
-	- Industry standards, association, and consortium specs
-		-
-		-
+	- ((6616a992-6259-45f1-b174-471678c1c82f))
+	  collapsed:: true
+		- [[NIST SP 800-193]]
+		- [[TCG]] [[DICE Attestation Architecture]]
+	- ((6616a9f0-e0f1-419c-84fb-cb40b2133d77))
+	  collapsed:: true
+		- Attacker profiles
+			- ((6616ab07-3e3f-435c-b052-be29002c3583))
+			- Levels of access to TOE
+			- ((6616ab2b-f8c7-451a-a6eb-11bd82109d06))
+		- ((6616ab3f-8820-4c43-aeb6-7c75475e4c26))
+			- Physical
+			- Logical
+		- ((6616ab61-b022-42bf-8edc-f12521649e5d))
+			- See published diagrams
+	- ((6616abb8-a9b8-4049-a75a-2f15c53bb0f7))
+	  collapsed:: true
+		- ((6616ac65-5698-4e5f-a8ae-b4eef7524b5b))
+			- Active
+			- Passive
+		- ((6616acf3-36ff-430a-8655-68a071fadd65))
+			- ((6616ad03-89ec-4aa0-a310-94d7c7fbfca6))
+		- ((6616af10-1935-4fa5-a656-1c86313382c4))
+			- ((6616af1b-e223-4efd-957a-231e8ce4e4bf))
+			- ((6616af6b-bfa2-4bf0-b181-decf5be235ad))
+		- ((6616af93-076f-48bb-bc49-f0bc1057f43d))
+		- ((6616af9a-75b7-4fb6-b6bc-44d324611c9e))
+			- SP 800-193 references
+			- How to rollback? ((6616b275-9d8a-479a-bd12-4fee380258dd))
+		- ((6616b292-d62c-417b-8ca1-b8ffc3694d9f))
+			- ((6616b2b8-38f5-4098-b400-643ef19c11f5))
+			- ((6616b2d3-6a46-43d7-8b58-f62dbe90a23a))
+			- ((6616b2e5-1bc6-4a89-8599-6d902fb128a9))
+	- ((6616b2fb-c754-422d-b80c-f9bb31091ba4))
+		- ((6616b30d-77dc-499a-a5e2-d040f029e7a4))
+	- ((6616b321-724f-4c55-a94d-4d6e462fe22c))
+	- ((6616b32d-9a70-447f-9f78-30481145e4bd))
+		- ((6616b34a-093f-4551-8e6f-c041b7275fcd))
+	- ((6616b358-66d8-43a8-bf6e-9be4576b2a99))
+	- ((6616b3af-0c56-4054-bb68-8f9f85ce3da7))
+	- ((6616d3a1-8b85-45e3-90c2-5cc3d89a8982))
+		- ((6616d3d1-e5db-40e0-8805-a329b7abb11d))
+	-

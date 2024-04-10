@@ -1,0 +1,2 @@
+file:: [NIST.SP.800-193_1712761205320_0.pdf](../assets/NIST.SP.800-193_1712761205320_0.pdf)
+file-path:: ../assets/NIST.SP.800-193_1712761205320_0.pdf
