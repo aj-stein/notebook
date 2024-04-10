@@ -1,4 +1,5 @@
 - ![National-Strategy-on-Microelectronics-Research-March-2024.pdf](../assets/National-Strategy-on-Microelectronics-Research-March-2024_1710871730688_0.pdf)
+  collapsed:: true
 	- Goals: ((65f9d4d2-532f-4a9a-adb9-bba6b8a6bd87))
 	- Follow-up to previous report, this one focused on semi-conductors as referenced from: ((65f9d51f-f454-4221-bbc2-8614c35a4eba))
 	- Key takeaways from the goals and objectives:
@@ -17,3 +18,37 @@
 	- ((65f9d947-82cd-474f-a9e8-fc6179fad65e))
 	- ((65f9d95c-9395-4b58-9007-f094e0661361))
 	-
+- ![Open Compute Project Caliptra System on a Chip Root of Trust](../assets/Caliptra_--_Silicon_RoT_Services_09012022_1712759217891_0.pdf)
+	- Theory of operation
+		- ((6616a67b-57ae-4aa7-a5ca-501ce0c861c3))
+		- Some of these solutions are either proprietary or aligned to specific parts of an industry standards/consortium/association specifications
+			- [[DMTF]]
+			- [[IEEE]]
+			- [[NIST]]
+			- [[Open Compute Project]]
+			- [[TCG]]
+		- ((6616a6bd-2b58-44ea-9c09-f001413ba2a3))
+		- ((6616a6de-e130-4ea0-a14a-490c715418cf))
+	- Silicon RoT Goals
+		- ((6616a71f-7906-4850-b8cd-c08fa424a76c))
+		- ((6616a770-3d9c-4371-9cd0-293b913e8e41))
+			- Definition and design of standard silicon RoT baseline
+				- Reference functional spec
+					- Control over SoC non-violatile state (asset entropy)
+				- Reference APIs
+				- Reference implementation
+				- Open source reference (RTL and firmware ref code)
+			- Consistency for larger industry with internal RoT (iRoT) arch and implementation [[DICE]]
+			- Silicion iRoT scope include all datacnter-focusd server class SoC and ASIC
+		- Non-goals:
+			- Foundry IP integration
+			- Physical design countermeasures
+			- Analog IPs
+			- Post-manufacturer test and init (e.g. OSAT)
+			- Certification
+	- Use cases
+		- Supply chain security
+		- DICE-as-a-Service
+	- Industry standards, association, and consortium specs
+		-
+		-
