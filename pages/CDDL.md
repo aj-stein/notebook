@@ -1,5 +1,6 @@
 - Specifications
 	- [[RFC 8610]] is the core spec
+	- [[draft-ietf-cbor-cddl-more-control-04]]
 - Resources
 	- Resource:: Library, CLI language:: Rust [Nullus157/cbor-diag-rs](https://github.com/Nullus157/cbor-diag-rs)
 	- resource:: Library, CLI language:: Rust [Nullus157/cbor-diag-rs](https://github.com/Nullus157/cbor-diag-rs)
