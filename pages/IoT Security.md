@@ -1,0 +1,2 @@
+- ![Draft IETF standarddraft-ietf-iotops-security-summary-01](../assets/draft-ietf-iotops-security-summary-01.txt_1713543506475_0.pdf)
+-
